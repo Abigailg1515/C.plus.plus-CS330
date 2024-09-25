@@ -31,29 +31,29 @@ int main()
 
 ### Primitive (built-in) Data Types
 
-####Integer:
+#### Integer:
 
 
-####Character:
-####Boolean:
-####Floating Point:
-####Double Floating Point:
-####Valueless or Void:
-####Wide Character:
+#### Character:
+#### Boolean:
+#### Floating Point:
+#### Double Floating Point:
+#### Valueless or Void:
+#### Wide Character:
 
 ### Derived Data Types
 
-####Function:
-####Array:
-####Pointer:
-####Reference:
+#### Function:
+#### Array:
+#### Pointer:
+#### Reference:
 
 ### User-defined Data Types
 
-####Class:
-####Structure:
-####Union:
-####Enumeration:
-####Typedef Defined Datatype:
+#### Class:
+#### Structure:
+#### Union:
+#### Enumeration:
+#### Typedef Defined Datatype:
 
 

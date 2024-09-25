@@ -107,4 +107,79 @@ data_type &ref = variable;
 #### Enumeration:
 #### Typedef Defined Datatype:
 
+## Data Type Discussion
+
+A reserved word is a word that cannot be used as an identifier, such as the name of a variable, function, or label. It is "reserved from use" and C++ has approximately 60 reserved words. About half of them were present in the C programming language and just carried over, while the other half are new reserved words just in C++. There are a few more naming requirements for variables in C++ other than their inability to be a reserved word.
+
+Naming Requirements:
+
+1. Names can contain letters, digits, and underscores
+2. Names must begin with a letter or an underscore (_)
+3. Names are case-sensitive (myVar and myvar are different variables)
+4. Names cannot contain whitespaces or special characters like !, #, %, etc
+5. Reserved words (like C++ keywords, such as int) cannot be used as names
+
+Naming Conventions:
+
+1. The class name should be a noun
+2. Use uppercase letters as word separators and lowercase for the rest of the word in the class name
+3. The first character in the class name should be uppercase
+4. No underscores ('_') are permitted in the class name
+5. The private attribute name in class should be prepended with the character 'm'
+6. Character 'm' preceds other name modifiers
+7. Each method or function should begin with a verb
+8. The first character of a function argument should be lowercase, all words after the first letter should be in uppercase with class names
+9. The variable name should begin with an alphabet
+10. Digits may be used, but after alphabets in variable names
+11. Pointer variables shpould be prepended with 'p' and place the asterisk '*' close to the variable name instead of the pointer type
+12. Reference variables should be prepended with 'r'
+13. Static variables should be prepended with 's'
+14. The global constants should be all capital letters separated with '_'
+15. No special character is allowed in the file name except for ('_') and dash ('-')
+16. The file name should end with the .cc extension in tehe end or should end with the .cpp extension
+17. Do not use filenames that already exist in /user/include or any predefined header file name
+
+These standards are mixed between being enforced by the compiler and just standards in the coding community. If the specific standard is enforced by the compiler, your IDE may flag it as an error for you. Standards in the community are put in place to increase readability and ensure uniformity, your IDE may let you ignore these community standards and compile just fine without following them. Though the code may compile, following community standards is in your best interest.
+
+C++ is statically typed, meaning variables are bound to a data type during compilation. Also meaning the programmer has to declare the type of the variable when it is originally declared. Eg: Data_type variable_name.
+
+A strongly typed language is described as demanding specification of data types. A weakly typed or loosely typed language is described as does NOT require specification when it comes to different types of objects and variables. C++ is generally (mostly) considered strongly typed because variable type must be specified. C++ could be considered weakly typed because of the users ability to convert data types without a cast (special operator that forces data conversion) and without compiler errors.
+
+C++ is explicitly typed, this means that you must declare the type of each variable when you define it. This makes the code clearer regarding what types of data are being used and you generally need to declare your variable types, function parameters, and return values. Conversely, dynamic languages like Python and Ruby are more relaxed and implicit. You typically don’t need to explicitly declare variable types, function parameters, or return values.
+
+A mutable object can be changed after it's created, and an immutable object can't. By default, all objects are mutable in C++, but there are keywords such as const that can make them immutable, and the mutable keyword that can make immutable variables mutable.
+
+An operator is a symbol that operates on a value to perform a specific mathematical or logical computation. These form the foundation of any programming language, but are built into C++ to provide the required level of functionality. The operators used in C++ can be classified into 6 types.
+
+#### Arithmetic Operators:
+
+These operators are used to perform arithmetic or mathematical operations on the operands. Arithmetic operators can be classified into two types with those being Unary Operators and Binary Operators. Unary Operators work with a single operand, for example (Increment'++') and (Decrement'--'). Binary operators work with two operands, for example (Addition'+') and (Subtraction'-')
+
+#### Assignment Operators:
+
+Used to assign value to a variable. The left side operand of the assignment operator is a variable and the right side operand of the operator is the value. The value on the right must be the same data type as the variable on the left, otherwise there will be a compiler error.
+
+#### Relational Operators:
+
+These operators are used for the comparison of the values of two operands. For example, '<' checks if one operand is less than the other operand. The result returns a Boolean (True or False).
+
+#### Logical Operators:
+
+These operators are used to combine two or more conditions/constraints. They could also be used to complement the evaluation of the original condition in consideration. The result returns a Boolean value (True or False).
+
+#### Bitwise Operators:
+
+Used to perform bit-level operations on the operands. THe operators are first converted to bit-level, then the calculation is performed. These operators can be used for mathematical operations, such as addition, subtraction, etc
+
+#### Ternary/Conditional Operators:
+
+The ternary operator ('?') determines the answer on the basis of the evaluation of Expression1. If true, Expression2 gets evaluated and is used as the answer for the expression. If Expression1 is false, then Expression3 gets evaluated and is used as the answer for the expression. This operator takes three operands, which is why it is known as the Ternary Operator.
+
+
+
+
+
+
+
+
 

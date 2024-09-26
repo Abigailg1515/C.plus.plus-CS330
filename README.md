@@ -175,6 +175,24 @@ Used to perform bit-level operations on the operands. THe operators are first co
 
 The ternary operator ('?') determines the answer on the basis of the evaluation of Expression1. If true, Expression2 gets evaluated and is used as the answer for the expression. If Expression1 is false, then Expression3 gets evaluated and is used as the answer for the expression. This operator takes three operands, which is why it is known as the Ternary Operator.
 
+Mixed type operations are allowed in C++. In C++, you can perform operations between different types (e.g., int, float, double, etc.), and the compiler will automatically handle type conversion based on the rules of type promotion and type conversion.
+
+In C++, the binding of identifier names (variables, functions, etc.) and operator symbols occurs at different stages depending on whether it's compile-time or runtime binding:
+
+#### Identifier Names:
+Compile-time binding: Most identifiers (e.g., variables, non-virtual functions, classes) are resolved at compile-time when the compiler determines their meaning.
+Runtime binding: Virtual functions in polymorphism are resolved at runtime based on the actual object type.
+#### Operator Symbols:
+Compile-time binding: Operators for basic types and most overloaded operators are resolved at compile-time.
+Runtime binding: Virtual operators (in inheritance) can be bound at runtime, though this is less common.
+Most identifiers and operators in C++ are bound at compile-time, with runtime binding used for polymorphism and virtual functions.
+
+
+## Sources
+
+1. 
+
+
 
 
 

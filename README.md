@@ -187,6 +187,32 @@ Compile-time binding: Operators for basic types and most overloaded operators ar
 Runtime binding: Virtual operators (in inheritance) can be bound at runtime, though this is less common.
 Most identifiers and operators in C++ are bound at compile-time, with runtime binding used for polymorphism and virtual functions.
 
+## Code Illustration
+
+In C++, the line x = "5" + 6; will not compile as written. This is because C++ does not support adding a string literal ("5") and an integer (6) directly.
+
+Reason for Compilation Failure:
+String Literal as a Pointer: In C++, a string literal like "5" is actually a constant character array, and the expression "5" decays to a pointer to the first character (type const char*).
+Invalid Pointer Arithmetic: The expression "5" + 6 attempts to add an integer (6) to a pointer (const char*), which would result in pointer arithmetic. It would offset the pointer to point to the 7th character in the string, but since the string "5" has only one character, this results in undefined behavior.
+
+#### Fix For C++
+```
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str = "5";
+    int x = stoi(str) + 6;  // Convert "5" to integer and add 6
+    cout << x << endl;      // Output: 11
+    return 0;
+}
+```
+Common Complex Data Types:
+std::string: A common class for handling text.
+std::vector: A dynamic array that can grow and shrink as needed.
+std::pair and std::tuple: For grouping multiple types together in a single object.
+std::map, std::set, and std::unordered_map: Built-in associative containers for key-value storage.
 
 ## Sources
 

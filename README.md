@@ -208,11 +208,17 @@ int main() {
     return 0;
 }
 ```
-Common Complex Data Types:
-std::string: A common class for handling text.
-std::vector: A dynamic array that can grow and shrink as needed.
-std::pair and std::tuple: For grouping multiple types together in a single object.
-std::map, std::set, and std::unordered_map: Built-in associative containers for key-value storage.
+#### Limitations of C++ + Complex (built-in) Data Types:
+
+Adding Ints and Floats: C++ allows implicit widening conversion when adding an int to a float (e.g., int + float results in float), ensuring precision is maintained.
+
+Storing Different Types in Lists: C++ arrays and containers are homogeneous, meaning they only store one type. Mixed types can be handled using std::variant or std::any (C++17), but this adds complexity.
+
+Type Conversion: C++ supports implicit conversions (e.g., int to float), but explicit casting is required for narrowing conversions (e.g., float to int).
+
+Pitfalls: Implicit conversions can sometimes lead to unexpected results, and managing mixed types in containers can make the code harder to maintain.
+
+Built-in Complex Data Types: C++ provides versatile data types like std::string, std::vector, std::pair, std::tuple, and associative containers (std::map, std::set), which simplify handling complex data structures in a type-safe manner.
 
 ## Sources
 

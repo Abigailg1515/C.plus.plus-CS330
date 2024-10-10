@@ -295,14 +295,99 @@ inline int square(int x) {
 ```
 Finally, The order of parameters and the return type in the function prototype must exactly match the definition and usage.
 
+INFORMATION FROM FUNCTION PLACEMENT + STATIC V INLINE SECTIONS CAME FROM SOURCES [2, 3, 4, 5]
+
 #### Recursion
 
 "C++ does support recursion. Recursion is a method in C++ which calls itself directly or indirectly until a suitable condition is met. In this method, we repeatedly call the function within the same function, and it has a base case and a recursive condition. The recursive condition helps in the repetition of code again and again, and the base case helps in the termination of the condition. If there is no base case in the recursive function, the recursive function will continue to repeat continuously." [6]
 
-#### 
+#### Simplilearn Example:
+```
+int recursion(n)
+{
+ if(n==0)
+ {
+ return;
+ }
+ return(n-1);
+}
+```
+
+#### Parameters + Data Types:
+
+C++ can accept as mamy parameters as you want, but you need to rememeber their order when you call the function. The parameters can be of different data types, but a function in C++ can only return one data type. [7][8]
+
+#### Returning Multiple Values
+In C++, you can not DIRECTLY return multiple values at the same time, but there are ways around this problem. The solutions involves pointers, structures, and arrays. For the sake of space, I'm going to put one example below. The rest of the examples and information can be found at source [9].
+
+POINTER EXAMPLE:
+```
+// Modified program using pointers
+#include <iostream>
+using namespace std;
+ 
+// add is the short name for address
+void compare(int a, int b, int* add_great, int* add_small)
+{
+    if (a > b) {
+ 
+        // a is stored in the address pointed
+        // by the pointer variable *add_great
+        *add_great = a;
+        *add_small = b;
+    }
+    else {
+        *add_great = b;
+        *add_small = a;
+    }
+}
+ 
+// Driver code
+int main()
+{
+    int great, small, x, y;
+ 
+    cout << "Enter two numbers: \n";
+    cin >> x >> y;
+ 
+    // The last two arguments are passed
+    // by giving addresses of memory locations
+    compare(x, y, &great, &small);
+    cout << "\nThe greater number is " << great << " and the smaller number is "
+      << small;
+ 
+    return 0;
+}
+ 
+// This code is contributed by sarajadhav12052009
+// From geeks for geeks
+```
+
+#### Pass By Reference vs. Pass By Value
+
+C++ is pass by value by default, but it is capable of pass by reference. [10] 
+
+#### Argument + Parameters + Local Variable Storage
+
+"Local variables (i.e. those that are declared inside methods) are stored on the stack. This means their values are stored on the stack, therefore meaning that local reference type variables have references stored on the stack and local value type variables have actual values stored on the stack." [11]
+
+In C++, arguments and parameters are typically managed on the stack. When a function is called, the arguments are pushed onto the stack, and the function parameters reference these values. If an argument is a primitive type, the actual value is stored on the stack. If it is an object or a reference type, a reference (or pointer) to the object on the heap may be stored on the stack instead.
+
+#### Scoping Rules
+
+There are five types of scopes in C++:
+
+Function
+File
+Block
+Function Prototype
+Class
+
+https://sites.google.com/site/computerbookscentre/scope-rules#
 
 
-INFORMATION FROM FUNCTIONS SECTION CAME FROM SOURCES [2, 3, 4, 5]
+
+
 
 
 
@@ -314,6 +399,11 @@ INFORMATION FROM FUNCTIONS SECTION CAME FROM SOURCES [2, 3, 4, 5]
 4. <https://en.cppreference.com/w/>
 5. <https://www.tutorialspoint.com/cplusplus/cpp_functions.htm>
 6. <https://www.simplilearn.com/tutorials/cpp-tutorial/what-is-recursion-in-cpp#:~:text=A%20function%20in%20C%2B%2B,a%20certain%20condition%20is%20met.>
+7. <https://www.tutorialspoint.com/cplusplus/cpp_multiple_function_parameters.htm#:~:text=C%2B%2B%20multiple%20function%20parameters%20describe,subset%20of%20data%20at%20once.>
+8. <https://www.udacity.com/blog/2021/09/developers-guide-to-cpp-function-parameters.html#:~:text=As%20with%20the%20function%20itself,same%20data%20type%20for%20all.>
+9. <https://www.geeksforgeeks.org/how-to-return-multiple-values-from-a-function-in-c-or-cpp/>
+10. <https://medium.com/@saumyapathak2011/pass-by-value-vs-pass-by-reference-once-and-for-all-41c056d684d0>
+11. <https://endjin.com/blog/2022/07/understanding-the-stack-and-heap-in-csharp-dotnet#:~:text=Local%20variables%20(i.e.%20those%20that,values%20stored%20on%20the%20stack.>
 
 
 

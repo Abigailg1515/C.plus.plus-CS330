@@ -297,10 +297,17 @@ Finally, The order of parameters and the return type in the function prototype m
 
 
 
+INFORMATION FROM FUNCTIONS SECTION CAME FROM SOURCES [2, 3, 4, 5]
+
+
+
 ## Sources
 
 1. <https://www.techtarget.com/searchdatamanagement/definition/C#:~:text=C%2B%2B%20is%20an%20object%2Doriented,superset%20of%20the%20C%20language.>
 2. <https://blog.hubspot.com/website/call-a-function-in-c#:~:text=C%2B%2B%20Function%20Declarations%20%26%20Definitions&text=The%20syntax%20for%20a%20function,x”%20and%20“y.”>
+3. <https://www.geeksforgeeks.org/functions-in-cpp/>
+4. <https://en.cppreference.com/w/>
+5. <https://www.tutorialspoint.com/cplusplus/cpp_functions.htm>
 
 
 

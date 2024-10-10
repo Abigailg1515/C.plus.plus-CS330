@@ -220,9 +220,87 @@ Pitfalls: Implicit conversions can sometimes lead to unexpected results, and man
 
 Built-in Complex Data Types: C++ provides versatile data types like std::string, std::vector, std::pair, std::tuple, and associative containers (std::map, std::set), which simplify handling complex data structures in a type-safe manner.
 
+## Functions
+
+#### Function Declaration:
+
+The syntax for a function declaration is {return_type function_name(parameter_list);}
+
+#### EXAMPLE
+```
+int add(int x, int y)
+```
+In the example above, int is the return type and add is the function name. int x and int y are a part of the function parameter list. [2]
+
+#### Function Placement
+
+In general, we need to make sure that functions are declared before they are used in C++, unless we implemented a function prototype at the top of the file or before you use that function. Functions that are meant to be methods of a class should be placed inside the class definition, unless you are implementing a member function. A member function allows a method to be defined outside of a class, but still must be declared inside the class. 
+
+#### Example of outside class definition using member function:
+```
+#include <iostream>
+
+class Dog {
+public:
+    void bark();  // Function declaration inside the class
+};
+
+// Function definition outside the class
+void Dog::bark() {
+    std::cout << "Woof!" << std::endl;
+}
+
+int main() {
+    Dog myDog;
+    myDog.bark();
+}
+```
+In larger C++ projects, it's common to place function declarations (prototypes) in header files (.h or .hpp files) and function definitions in source files (.cpp files). This promotes modularity and reusability of code.
+
+#### Dog.h
+```
+class Dog {
+public:
+    void bark();  //Function prototype
+};
+```
+#### Dog.cpp
+```
+#include "Dog.h"
+#include <iostream>
+
+void Dog::bark() {
+    std::cout << "Woof!" << std::endl;
+}
+```
+#### Main.cpp
+```
+#include "Dog.h"
+
+int main() {
+    Dog myDog;
+    myDog.bark();
+}
+```
+Static functions can be defined in a .cpp file, but they will be limited to the file scope (i.e. they are not accessible outside that file). Inline functions are small functions defined directly in the header or within a class, and the compiler can expand them directly at the point of call to avoid the overhead of function calls.
+
+#### Static + Inline
+```
+static int multiply(int a, int b) {
+    return a * b;
+}
+inline int square(int x) {
+    return x * x;
+}
+```
+Finally, The order of parameters and the return type in the function prototype must exactly match the definition and usage.
+
+
+
 ## Sources
 
 1. <https://www.techtarget.com/searchdatamanagement/definition/C#:~:text=C%2B%2B%20is%20an%20object%2Doriented,superset%20of%20the%20C%20language.>
+2. <https://blog.hubspot.com/website/call-a-function-in-c#:~:text=C%2B%2B%20Function%20Declarations%20%26%20Definitions&text=The%20syntax%20for%20a%20function,x”%20and%20“y.”>
 
 
 

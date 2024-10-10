@@ -295,6 +295,11 @@ inline int square(int x) {
 ```
 Finally, The order of parameters and the return type in the function prototype must exactly match the definition and usage.
 
+#### Recursion
+
+"C++ does support recursion. Recursion is a method in C++ which calls itself directly or indirectly until a suitable condition is met. In this method, we repeatedly call the function within the same function, and it has a base case and a recursive condition. The recursive condition helps in the repetition of code again and again, and the base case helps in the termination of the condition. If there is no base case in the recursive function, the recursive function will continue to repeat continuously." [6]
+
+#### 
 
 
 INFORMATION FROM FUNCTIONS SECTION CAME FROM SOURCES [2, 3, 4, 5]
@@ -308,6 +313,7 @@ INFORMATION FROM FUNCTIONS SECTION CAME FROM SOURCES [2, 3, 4, 5]
 3. <https://www.geeksforgeeks.org/functions-in-cpp/>
 4. <https://en.cppreference.com/w/>
 5. <https://www.tutorialspoint.com/cplusplus/cpp_functions.htm>
+6. <https://www.simplilearn.com/tutorials/cpp-tutorial/what-is-recursion-in-cpp#:~:text=A%20function%20in%20C%2B%2B,a%20certain%20condition%20is%20met.>
 
 
 

@@ -385,6 +385,33 @@ Class
 
 https://sites.google.com/site/computerbookscentre/scope-rules#
 
+## Classes and Inheritance
+
+C++ is an object-oriented programming language therefore it fully supports the implementation of objects. Class names should use Pascal case for class names, while object and variable names use Camel case. Functions and methods also use Camel case.
+
+C++ does not have standard built-in methods, however, C++ has a few workarounds.  
+
+C++ supports inheritance and multiple inheritance. In single inheritance, a class (the derived class) inherits from one base class. The derived class gains access to the public and protected members of the base class, allowing code reuse and establishing a hierarchical relationship. C++ supports multiple inheritance, which allows a derived class to inherit from more than one base class. This is not available in many OOP languages due to potential complexities (such as the "diamond problem").
+
+Method Resolution in C++
+
+Method Overriding: Use the virtual keyword in base classes to allow derived classes to override methods. Calls to virtual functions are resolved at runtime based on the object type, enabling polymorphism.
+Method Overloading: A derived class can define methods with the same name as in the base class but with different parameters. Both base and derived overloads are accessible unless they are hidden.
+Name Hiding: If a derived class defines a method with the same name as a base class method, it hides all base versions. The hidden methods can still be accessed with the Base::method syntax.
+
+Memory Management: C++ supports both automatic (stack) and dynamic (heap) allocation. Destructors clean up resources when objects go out of scope, but dynamically allocated memory must be manually managed to prevent leaks.
+Polymorphism: Virtual functions allow runtime polymorphism. Using virtual in-base classes enables derived classes to override methods, with override and final keywords improving clarity and safety.
+Multiple Inheritance & Virtual Inheritance: C++ supports multiple inheritance, which can cause ambiguity (the "diamond problem"). Virtual inheritance prevents this by creating a single shared instance of the base class.
+Copy and Move Semantics: To manage resources correctly, define a copy constructor, copy assignment operator, destructor, and optionally a move constructor and move assignment (the Rule of Three/Five).
+Templates: C++ supports generic programming with templates, allowing flexible and reusable classes and functions.
+Object Slicing: Assigning a derived object to a base object slices off the derived part. Use pointers or references to avoid slicing in polymorphic contexts.
+
+
+
+
+
+
+
 
 
 

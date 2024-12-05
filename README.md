@@ -385,6 +385,76 @@ Class
 
 https://sites.google.com/site/computerbookscentre/scope-rules#
 
+## If/Else, Switch, & Logical Operators
+
+1. Boolean Values in C++
+
+    Values: true and false (case-sensitive). They are keywords representing 1 and 0, respectively, under the hood.
+
+2. Conditional Statements in C++
+
+    Supported Statements:
+        if / else
+        if / else if / else
+        switch / case / default
+   
+    Other Features:
+        No native unless, but logical negation (!) can mimic it: if (!(x > 0)).
+
+3. Code Block Delimitation
+
+    Code blocks under conditions are enclosed in curly braces {}.
+    Single-line statements can omit braces, though it's not recommended:
+    ```
+    if (x > 0) cout << "Positive" << endl;
+    ```
+4. Short-Circuit Evaluation
+
+    Behavior: C++ evaluates logical operators && (AND) and || (OR) in a short-circuit manner:
+        For ||, evaluation stops if the first condition is true.
+        For &&, evaluation stops if the first condition is false.
+    Example:
+    ```
+    int a = 5;
+    if (a > 0 || (10 / a > 2)) { // Second part isn't evaluated because a > 0 is true.
+    cout << "Short-circuit prevents errors." << endl;
+    }
+    ```
+5. Dangling Else Problem
+
+    Issue: When nested if/else statements lack braces, the else may associate with the wrong if.
+    Solution: Use braces to clearly associate blocks:
+    ```
+    if (x > 0) {
+    if (y > 0) {
+        cout << "Both are positive" << endl;
+    }
+    } else {
+    cout << "At least one is non-positive" << endl;
+    }
+    ```
+6. Switch/Case in C++
+
+    Break: Required to exit a case; otherwise, execution "falls through" to subsequent cases.
+    Continue: Not applicable to switch. C++ switch evaluates only one condition per execution cycle.
+    Example:
+   ```
+   switch (choice) {
+    case 1:
+        cout << "Case 1" << endl;
+        break;
+    case 2:
+        cout << "Case 2" << endl;
+        break;
+    default:
+        cout << "Default case" << endl;
+    }
+    ```
+7. Why C++ Lacks Functional Language Alternatives
+
+    Functional languages use expressions rather than statements for control flow, as they favor immutability and recursion.
+    C++ is imperative, emphasizing explicit flow control with if/else and switch.
+   
 ## Classes and Inheritance
 
 C++ is an object-oriented programming language therefore it fully supports the implementation of objects. Class names should use Pascal case for class names, while object and variable names use Camel case. Functions and methods also use Camel case.

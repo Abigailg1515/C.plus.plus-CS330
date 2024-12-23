@@ -28,6 +28,7 @@ int main()
     cout << "Hello World";
 }
 ```
+# PLP 2
 
 ## Data Types
 
@@ -222,6 +223,8 @@ Pitfalls: Implicit conversions can sometimes lead to unexpected results, and man
 
 Built-in Complex Data Types: C++ provides versatile data types like std::string, std::vector, std::pair, std::tuple, and associative containers (std::map, std::set), which simplify handling complex data structures in a type-safe manner.
 
+# PLP 3
+
 ## Functions
 
 #### Function Declaration:
@@ -387,6 +390,8 @@ Class
 
 https://sites.google.com/site/computerbookscentre/scope-rules#
 
+# PLP 4
+
 ## If/Else, Switch, & Logical Operators
 
 1. Boolean Values in C++
@@ -456,6 +461,8 @@ https://sites.google.com/site/computerbookscentre/scope-rules#
 
     Functional languages use expressions rather than statements for control flow, as they favor immutability and recursion.
     C++ is imperative, emphasizing explicit flow control with if/else and switch.
+
+# PLP 5
    
 ## Classes and Inheritance
 
